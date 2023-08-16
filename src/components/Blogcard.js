@@ -1,0 +1,40 @@
+import React from 'react';
+
+function Blogcard(props) {
+  return (
+    <div>
+      <article className="templatemo-blog-post">
+        <div className="post-img-container">
+          <img
+            src={props.urun.imageUrl}
+            alt="Post 1"
+            className="post-img img-responsive"
+            style={{ height: "450px", width: "400px" }}
+          />
+          <div className="templatemo-post-date gold-text">
+            <div>
+              <div className="text-center date">20</div>
+              <div className="text-center">January</div>
+            </div>
+          </div>
+        </div>
+        <div className="post-title">
+          <h3 className="text-uppercase" style={{ fontSize: "30px" }}>
+            {props.urun.name}
+          </h3>
+        </div>
+        <div className="post-meta-data">
+          <p className="gold-text">
+            <i style={{ fontSize: "20px" }}>{props.urun.ustbaslik}</i>
+          </p>
+        </div>
+        <a href={`/text/${props.urun._id}`} className="gray-text margin-top-10 post-read-more">
+          <i className="fa fa-arrow-circle-o-right fa-2x v-align-middle"></i> oku
+        </a>
+        <hr />
+      </article>
+    </div>
+  );
+}
+
+export default Blogcard;
