@@ -1,11 +1,5 @@
 import React, { useEffect, useState } from 'react';
 
-function stripHtmlTags(html) {
-  const tmp = document.createElement('div');
-  tmp.innerHTML = html;
-  return tmp.textContent || tmp.innerText || '';
-}
-
 function Bloglistcard(props) {
   const [url, setUrl] = useState();
 
@@ -13,6 +7,10 @@ function Bloglistcard(props) {
     const encodedImageUrl = encodeURIComponent(props.urun.imageUrl);
     setUrl(encodedImageUrl);
   }, []);
+
+  const createMarkup = (html) => {
+    return { __html: html };
+  };
 
   return (
     <div>
@@ -33,9 +31,12 @@ function Bloglistcard(props) {
               <img src={props.urun.imageUrl} className="img-fluid" alt="" />
             </td>
             <td>{props.urun.name}</td>
-            <td>{stripHtmlTags(props.urun.aciklama)}</td>
             <td>
-              <a className="btn btn-sm btn-primary" href={`/blogupdate/${props.urun._id}/${url}/${props.urun.name}/${stripHtmlTags(props.urun.aciklama)}/${props.urun.ustbaslik}`}>edit</a>
+              {/* Use dangerouslySetInnerHTML to render formatted content */}
+              <div dangerouslySetInnerHTML={createMarkup(props.urun.aciklama)} />
+            </td>
+            <td>
+              <a className="btn btn-sm btn-primary" href={`/blogupdate/${props.urun._id}/${url}/${props.urun.name}/${encodeURIComponent(props.urun.aciklama)}/${props.urun.ustbaslik}`}>edit</a>
               <a className="btn btn-sm btn-danger" href={`/blogsil/${props.urun._id}/${props.urun.name}`}>delete</a>
             </td>
           </tr>

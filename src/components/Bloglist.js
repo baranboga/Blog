@@ -19,28 +19,21 @@ function Bloglist() {
     
           navigate("/login")
         }
+
         else{
+
           getProducts()
-          .then((data) => {
-              console.log('Product posted successfully:', data);
-             
-          })
-          .catch((error) => {
-              console.error(error);
-              alert("Bloglar görüntülenemedi")
-          });
-    
-        }
-
-
-
-        getProducts()
           .then((data) => {
             setproduct(data)
           })
           .catch((error) => {
             console.error(error);
           });
+
+
+        }
+
+       
       });
     return (
         <div>

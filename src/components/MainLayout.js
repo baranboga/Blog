@@ -24,7 +24,7 @@ export default function MainLayout() {
     useEffect(()=>{
         let admin = localStorage.getItem('admin');
         setKey(admin)
-        console.log(key)
+       
 
         $(document).ready(function(){
 

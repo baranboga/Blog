@@ -1,10 +1,18 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router'
 import { updateproducts } from '../requests/product';
-import { CKEditor } from '@ckeditor/ckeditor5-react';
-import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
 
 function Blogupdate() {
+
+
+    const handleAciklamaChange = (value) => {
+        setProduct((prevProduct) => ({
+            ...prevProduct,
+            aciklama: value,
+        }));
+    };
 
     let navigate = useNavigate()
     const param = useParams()
@@ -33,6 +41,9 @@ function Blogupdate() {
             imageUrl: param.imageUrl,
             ustbaslik: param.ustbaslik,
         });
+
+
+
     }, [param]);
 
 
@@ -47,6 +58,7 @@ function Blogupdate() {
         else {
             updateproducts(product, id, token)
                 .then((data) => {
+                    console.log(product)
                     console.log('Product posted successfully:', data);
                     navigate("/bloglist")
                 })
@@ -90,13 +102,9 @@ function Blogupdate() {
                                 Açıklama
                             </label>
                             <div className="col-sm-8">
-                                <CKEditor
-                                    editor={ClassicEditor}
-                                    data={product.aciklama} // Set initial data value
-                                    onChange={(event, editor) => {
-                                        const data = editor.getData();
-                                        setProduct({ ...product, aciklama: data });
-                                    }}
+                                <ReactQuill
+                                    value={product.aciklama}
+                                    onChange={handleAciklamaChange}
                                 />
                             </div>
                         </div>
