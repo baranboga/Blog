@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink} from 'react-router-dom'
 
 function Blogcard(props) {
   return (
@@ -28,9 +29,9 @@ function Blogcard(props) {
             <i style={{ fontSize: "20px" }}>{props.urun.ustbaslik}</i>
           </p>
         </div>
-        <a href={`/text/${props.urun._id}`} className="gray-text margin-top-10 post-read-more">
-          <i className="fa fa-arrow-circle-o-right fa-2x v-align-middle"></i> oku
-        </a>
+        <NavLink activeClassName="active" style={{ fontSize: "15px", textDecoration:"none",color:"black" }} to={`/text/${props.urun._id}`}>Oku
+          <i className="fa fa-arrow-circle-o-right fa-2x v-align-middle"></i> 
+          </NavLink>
         <hr />
       </article>
     </div>

@@ -30,15 +30,14 @@ export const getProducts =()=>{
     return dataPromise;
 }
 
-export const getProductsbyid =(_id,token)=>{
+export const getbyid =(id)=>{
   options.headers.Authorization = ``;
   options.method = "GET";
   options.headers.contentType = "application/json";
-  options.headers[key] = token; // "auth-token-key" başlığını ekliyoruz
-  options.url = `${url}/products/${_id}`;
-  options.data = _id;
+  options.url = `${url}/products/${id}`;
   const promise = axios.request(options);
   const dataPromise = promise.then((response) => response.data);
+  console.log(dataPromise)
   return dataPromise;
 }
 
@@ -77,14 +76,3 @@ export const deleteproducts = (_id,token) => {
     return dataPromise;
 }
   
-export const getProductById =(token,id)=>{
-    options.headers.Authorization = `Bearer ${token}`;
-    options.method = 'GET';
-    options.url = `${apiUrl}/Product/${id}`;
-
-    const promise = axios.request(options);
-    const dataPromise = promise.then((response)=>response.data);
-    return dataPromise;
-        
-
-}

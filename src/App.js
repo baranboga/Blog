@@ -4,7 +4,6 @@ import Login from './components/Login';
 import MainLayout from './components/MainLayout';
 import Home from './components/Home';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import Detail from './components/Detail';
 import Singin from './components/Singin';
 import Blog from './components/Blog';
 import Admin from './components/Admin';
@@ -29,10 +28,6 @@ const router = createBrowserRouter([
     [
       {
         path:'/', element:<Home/>
-      },
-  
-      {
-        path:'productDetail/:id', element:<Detail/>
       },
       {
         path:'/blog', element:<Blog/>
