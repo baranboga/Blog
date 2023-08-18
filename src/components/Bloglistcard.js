@@ -2,10 +2,16 @@ import React, { useEffect, useState } from 'react';
 
 function Bloglistcard(props) {
   const [url, setUrl] = useState();
+  const [url2, setUrl2] = useState();
+  const [url3, setUrl3] = useState();
 
   useEffect(() => {
     const encodedImageUrl = encodeURIComponent(props.urun.imageUrl);
+    const encodedImageUrl2 = encodeURIComponent(props.urun.imageUrliki);
+    const encodedImageUrl3 = encodeURIComponent(props.urun.imageUrluc);
     setUrl(encodedImageUrl);
+    setUrl2(encodedImageUrl2);
+    setUrl3(encodedImageUrl3);
   }, []);
 
   const createMarkup = (html) => {
@@ -36,7 +42,7 @@ function Bloglistcard(props) {
               <div dangerouslySetInnerHTML={createMarkup(props.urun.aciklama)} />
             </td>
             <td>
-              <a className="btn btn-sm btn-primary" href={`/blogupdate/${props.urun._id}/${url}/${props.urun.name}/${encodeURIComponent(props.urun.aciklama)}/${props.urun.ustbaslik}`}>edit</a>
+              <a className="btn btn-sm btn-primary" href={`/blogupdate/${props.urun._id}/${url}/${url2}/${url3}/${props.urun.name}/${encodeURIComponent(props.urun.aciklama)}/${props.urun.ustbaslik}`}>edit</a>
               <a className="btn btn-sm btn-danger" href={`/blogsil/${props.urun._id}/${props.urun.name}`}>delete</a>
             </td>
           </tr>

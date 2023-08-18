@@ -21,6 +21,8 @@ function Blogupdate() {
         name: '',
         aciklama: '',
         imageUrl: '',
+        imageUrliki: '',
+        imageUrluc: '',
         ustbaslik: '',
     });
     const [id, setid] = useState(
@@ -39,6 +41,8 @@ function Blogupdate() {
             name: param.name,
             aciklama: param.aciklama,
             imageUrl: param.imageUrl,
+            imageUrliki: param.imageUrliki,
+            imageUrluc: param.imageUrluc,
             ustbaslik: param.ustbaslik,
         });
 
@@ -89,6 +93,12 @@ function Blogupdate() {
                         <input type="hidden" name="imageUrl" value={product.imageUrl} onChange={((e) => {
                             setProduct({ ...product, imageUrl: e.target.value })
                         })} />
+                          <input type="hidden" name="imageUrl" value={product.imageUrliki} onChange={((e) => {
+                            setProduct({ ...product, imageUrliki: e.target.value })
+                        })} />
+                          <input type="hidden" name="imageUrl" value={product.imageUrluc} onChange={((e) => {
+                            setProduct({ ...product, imageUrluc: e.target.value })
+                        })} />
                         <div class="row mb-3">
                             <label for="baslik" class="col-sm-1 col-form-label">Name</label>
                             <div class="col-sm-11">
@@ -113,6 +123,22 @@ function Blogupdate() {
                             <div class="col-sm-11">
                                 <input type="text" class="form-control" id="url" name="imageUrl" value={product.imageUrl} onChange={((e) => {
                                     setProduct({ ...product, imageUrl: e.target.value })
+                                })} />
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="altbaslik" class="col-sm-1 col-form-label">Resimurl</label>
+                            <div class="col-sm-11">
+                                <input type="text" class="form-control" id="url" name="imageUrliki" value={product.imageUrliki} onChange={((e) => {
+                                    setProduct({ ...product, imageUrliki: e.target.value })
+                                })} />
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="altbaslik" class="col-sm-1 col-form-label">Resimurl</label>
+                            <div class="col-sm-11">
+                                <input type="text" class="form-control" id="url" name="imageUrluc" value={product.imageUrluc} onChange={((e) => {
+                                    setProduct({ ...product, imageUrluc: e.target.value })
                                 })} />
                             </div>
                         </div>

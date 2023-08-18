@@ -47,7 +47,7 @@ function Text() {
 
   return (
     <div className='row'>
-    <div className='col-8'>
+    <div className='col-7'>
       <div className='container' style={{ display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
     <div style={{fontSize:"35px",marginTop:"5rem",fontStyle:"italic"}}>{blog.name}</div>
     </div>
@@ -55,9 +55,10 @@ function Text() {
     <div dangerouslySetInnerHTML={createMarkup(blog.aciklama)} />
     </div>
     </div>
-    <div className='col-4'>
-    <img src="https://images.pexels.com/photos/8144625/pexels-photo-8144625.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
-    <img src="https://images.pexels.com/photos/8144625/pexels-photo-8144625.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+    <div className='col-5'>
+    <img className='img-fluid' style={{marginBottom:"30px",borderRadius:"50px"}} src={blog.imageUrl} alt="" />
+    <img className='img-fluid' style={{marginBottom:"30px",borderRadius:"50px"}} src={blog.imageUrliki} alt="" />
+    <img className='img-fluid' style={{marginBottom:"30px",borderRadius:"50px"}} src={blog.imageUrluc} alt="" />
       </div>
     </div>
   )

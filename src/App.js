@@ -51,7 +51,7 @@ const router = createBrowserRouter([
         path:'/blogsil/:id/:name', element:<Blogsil/>
       },
       {
-        path:'/blogupdate/:id/:imageUrl/:name/:aciklama/:ustbaslik/', element:<Blogupdate/>
+        path:'/blogupdate/:id/:imageUrl/:imageUrliki/:imageUrluc/:name/:aciklama/:ustbaslik/', element:<Blogupdate/>
       },
    
    

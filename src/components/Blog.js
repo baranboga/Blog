@@ -15,6 +15,8 @@ export default function Blog() {
  
 
   useEffect(() => {
+
+    console.log(products)
     /* Mobile menu */
     $('.mobile-menu-icon').click(function () {
       $('.templatemo-nav').slideToggle();
@@ -67,9 +69,6 @@ export default function Blog() {
                     ))
 
                   }
-                  
-             
-             
                 
             
                 </div>

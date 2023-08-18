@@ -9,8 +9,8 @@ function Admin() {
   const navigate = useNavigate();
 
   const urunkaydet = () => {
+    console.log(product)
     let token = localStorage.getItem('token');
-
     if (token == null) {
       navigate('/login');
     } else {
@@ -89,6 +89,38 @@ function Admin() {
                     name="imageUrl"
                     onChange={(e) =>
                       setProduct({ ...product, imageUrl: e.target.value })
+                    }
+                  />
+                </div>
+              </div>
+              <div className="row mb-3">
+                <label htmlFor="resim2" className="col-sm-2 col-form-label">
+                  Resim2
+                </label>
+                <div className="col-sm-8">
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="resim2"
+                    name="imageUrliki"
+                    onChange={(e) =>
+                      setProduct({ ...product, imageUrliki: e.target.value })
+                    }
+                  />
+                </div>
+              </div>
+              <div className="row mb-3">
+                <label htmlFor="resim3" className="col-sm-2 col-form-label">
+                  Resim3
+                </label>
+                <div className="col-sm-8">
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="resim3"
+                    name="imageUrluc"
+                    onChange={(e) =>
+                      setProduct({ ...product, imageUrluc: e.target.value })
                     }
                   />
                 </div>
