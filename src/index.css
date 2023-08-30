@@ -15,7 +15,7 @@ code {
 
 
 ul li a.active{
-  background-color: rgba(229, 244, 145, 0.922);
+  background-color: whitesmoke;
   border-radius: 5px;
 
 
@@ -27,6 +27,9 @@ ul li a.active{
   padding: 0;
   box-sizing: border-box;
 }
+
+
+
 
 
 

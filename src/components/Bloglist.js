@@ -44,7 +44,7 @@ function Bloglist() {
                     {
                         product.map((item)=>(
 
-                            <Bloglistcard key={item.id} urun={item} ></Bloglistcard>
+                            <Bloglistcard key={item.id} urun={item}  ></Bloglistcard>
 
 
                         ))

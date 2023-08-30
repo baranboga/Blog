@@ -35,13 +35,6 @@ function Text() {
                     alert("Blog kaydedilemedi")
                 });
 
-        
-
-
-
-
-
-
     })
    
 
