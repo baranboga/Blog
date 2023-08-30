@@ -5,6 +5,10 @@ import { getProducts, productType, postproducts } from "../requests/product";
 import Homeblogcard from "./Homeblogcard";
 import logo from "../images/3.jpeg";
 import $ from "jquery";
+import likya1 from "../images/likya1.jpg";
+import likyabaran from "../images/likyabaran.jpg";
+import likyamyra from "../images/likyamyra.jpg";
+
 
 export default function Home() {
   const [products, setProducts] = useState([]);
@@ -18,39 +22,37 @@ export default function Home() {
       .catch((error) => {
         console.error(error);
       });
-
   });
 
   return (
     <>
-  
-      <div className="w3-content" style={{ maxWidth: "1400px",marginTop:"50px" }}>
+      <div
+        className="w3-content"
+        style={{ maxWidth: "1400px", marginTop: "50px" }}
+      >
         <div className="w3-row">
           <div className="w3-col l8 s12">
             {/* Blog entry */}
             <div className="w3-card-4 w3-margin w3-white">
-              <img
-                src="https://images.pexels.com/photos/418831/pexels-photo-418831.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                alt="Nature"
-                style={{ width: "100%" }}
-              />
+              <img src={likya1} alt="Nature" style={{ width: "100%" }} />
               <div className="w3-container">
                 <h3>
-                  <b>TITLE HEADING</b>
+                  <b>GELİDONYA FENERİ</b>
                 </h3>
                 <h5>
-                  Title description,{" "}
-                  <span className="w3-opacity">April 7, 2014</span>
+                 
+                  <span className="w3-opacity">Ekim 7, 2021</span>
                 </h5>
               </div>
               <div className="w3-container">
                 <p>
-                  Mauris neque quam, fermentum ut nisl vitae, convallis maximus
-                  nisl. Sed mattis nunc id lorem euismod placerat. Vivamus
-                  porttitor magna enim, ac accumsan tortor cursus at. Phasellus
-                  sed ultricies mi non congue ullam corper. Praesent tincidunt
-                  sed tellus ut rutrum. Sed vitae justo condimentum, porta
-                  lectus vitae, ultricies congue gravida diam non fringilla.
+                  Gelidonya Feneri'nin etkileyici manzarası altında sıralanan
+                  adalar, sakin ve turkuaz renkli suların üzerinde mistik bir
+                  hava yaratır. Likya Yolu'nun yorgunluğunu unutturan bu adalar,
+                  kendinizi keşif dolu bir hikayenin içinde bulmanızı sağlar.
+                  Birbirinden farklı büyüklükteki adalar, etkileyici koylar ve
+                  gizli plajlar sunar. Sahip oldukları doğal güzellikleri ve
+                  sakin atmosferleri ile adeta rüya gibi bir ortam yaratırlar.
                 </p>
               </div>
             </div>
@@ -62,7 +64,7 @@ export default function Home() {
           <div className="w3-col l4">
             {/* About Card */}
             <div className="w3-card w3-margin w3-margin-top">
-              <img src={logo} style={{ width: "100%" }} alt="Avatar" />
+              <img src={likyabaran} style={{ width: "100%" }} alt="Avatar" />
               <div className="w3-container w3-white">
                 <h4>
                   <b style={{ fontStyle: "italic" }}>Rıza Baran Boğa</b>
@@ -121,8 +123,8 @@ export default function Home() {
                 </h3>
               </div>
               <img
-                src="https://images.pexels.com/photos/16692240/pexels-photo-16692240/free-photo-of-kent-peyzaj-yaz-bina.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                style={{ height: "400px" }}
+                src={likyamyra}
+                style={{ height: "500px",width:"500px" }}
               />
             </div>
           </div>
@@ -138,7 +140,7 @@ export default function Home() {
               </div>
               <img
                 src="https://images.pexels.com/photos/8389217/pexels-photo-8389217.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                style={{ height: "400px" }}
+                style={{ height: "500px",width:"500px" }}
               />
             </div>
           </div>

@@ -1,9 +1,10 @@
 import React from 'react'
+import patara from "../images/pataragate.jpg";
 
 function İletisim() {
     return (
         <div>
-            <div>
+            <div className='mt-5'>
                 <section class="templatemo-container padding-0">
 
                     <div class="templatemo-block-left contact">
@@ -32,7 +33,7 @@ function İletisim() {
                     </div>
                     <div className="templatemo-block-right">
                         <div id="">
-                        <img  src="https://images.pexels.com/photos/14816159/pexels-photo-14816159.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" style={{width:"800px",height:"600px",marginLeft:"10rem"}} alt="" />
+                        <img  src={patara} style={{width:"800px",height:"600px",marginLeft:"10rem"}} alt="" />
 
                         </div>
                     </div>

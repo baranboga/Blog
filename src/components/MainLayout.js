@@ -6,7 +6,6 @@ import { selectKeyword } from "../requests/slice";
 import { FaShoppingBasket } from "react-icons/fa";
 import { FaSignOutAlt } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
-import logo from "../images/3.jpeg";
 import logo1 from "../images/logo.png";
 
 
@@ -56,6 +55,30 @@ export default function MainLayout() {
               <li>
                 <Link to="/contact">İletişim</Link>
               </li>
+        
+              {key&&
+                    <div>
+                    <li>
+                     <Link to="/admin">Blog Ekle</Link>
+                    </li>
+                    <li>
+                     <Link to="/bloglist">Blog Listesi</Link>
+                    </li>
+                    <li>
+                     <Link onClick={(()=>{
+
+                      localStorage.clear()
+
+                     })} to="/">Çıkış</Link>
+                    </li>
+                    </div>
+                    
+               
+              
+             
+             
+             
+             }
             </ul>
           </div>
           <span class="navTrigger">

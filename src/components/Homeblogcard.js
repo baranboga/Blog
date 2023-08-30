@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link} from "react-router-dom";
 
 function Homeblogcard(props) {
     return (
@@ -6,11 +7,13 @@ function Homeblogcard(props) {
             <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                 <div className="product-type-container">
                     <div className="product-type-overlay">
-                        HELLO
+                    
+                 
+
                         <div className="product-type-info">
                             <i className="fa fa-search fa-2x gold-text"></i>
-                            <h3 className="gold-text text-uppercase">Okumak için</h3>
-                            <p className="text-uppercase white-text">o</p>
+                            <Link className='gold-text text-uppercase' style={{textDecoration:"none"}} to={`/text/${props.urun._id}`}>Oku</Link>
+                           
                         </div>
                     </div>
                     <div>
