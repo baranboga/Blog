@@ -1,5 +1,5 @@
 import React from 'react';
-import photo from '../images/2.jpeg';
+import photo from '../images/3.jpeg';
 
 function About() {
   return (
@@ -22,7 +22,7 @@ function About() {
               <div class="w3-display-container">
                 <img src={photo} style={{ width: "100%" }} alt="Avatar" />
                 <div class="w3-display-bottomleft w3-container w3-text-black"> {/* Changed w3-text-black */}
-                  <h2 style={{ fontFamily: 'revert-layer' }}>Rıza Baran Boğa</h2>
+                  <h2 style={{ fontFamily: 'revert-layer',color:"white" }}>Rıza Baran Boğa</h2>
                 </div>
               </div>
               <div class="w3-container">
@@ -72,9 +72,15 @@ function About() {
             <div class="w3-container w3-card w3-white w3-margin-bottom">
               <h2 class="w3-text-black w3-padding-16"><i style={{ color: "red" }} class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-black"></i>İş Tecrübesi</h2> {/* Changed w3-text-teal to w3-text-black */}
               <div class="w3-container">
+                <h5 class="w3-opacity"><b>React Developer / İnfotech academy</b></h5>
+                <h6 class="w3-text-black"><i class="fa fa-calendar fa-fw w3-margin-right"></i>27/03 -13/06/2023</h6> {/* Changed w3-text-teal to w3-text-black */}
+                <p>Next.js kullanarak mobil duyarlı (responsive) bir e-ticaret sitesi oluşturuldu.</p>
+                <hr />
+              </div>
+              <div class="w3-container">
                 <h5 class="w3-opacity"><b>Front End Developer / İnfotech academy</b></h5>
                 <h6 class="w3-text-black"><i class="fa fa-calendar fa-fw w3-margin-right"></i>27/03 -13/06/2023</h6> {/* Changed w3-text-teal to w3-text-black */}
-                <p>React.js kullanarak duyarlı (responsive) bir e-ticaret sitesi oluşturuldu.</p>
+                <p>React.js kullanarak mobil duyarlı (responsive) bir e-ticaret sitesi oluşturuldu.</p>
                 <hr />
               </div>
               <div class="w3-container">
