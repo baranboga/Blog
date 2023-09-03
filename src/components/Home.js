@@ -83,7 +83,7 @@ export default function Home() {
                 >
                   <li style={{ marginRight: "30px" }}>
                     <a
-                      href="https://github.com"
+                      href="https://github.com/baranboga"
                       target="_blank"
                       rel="noopener noreferrer"
                       style={{ color: "black", textDecoration: "none" }}
@@ -203,64 +203,4 @@ export default function Home() {
       </section>
     </>
   );
-}
-
-{
-  /* <form action="">
-
-                <li>
-                    <label htmlFor="name">Name</label>
-                    <input type="text" name='name' id='name' onChange={((e) => {
-
-                        setProducts({ ...products, name: e.target.value })
-
-                    })} />
-                </li>
-                <li>
-                    <label htmlFor="price">Price</label>
-                    <input type="number" name='price' id='price' onChange={((e) => {
-
-                        setProducts({ ...products, price: e.target.value })
-
-                    })} />
-                </li>
-                <li>
-                    <label htmlFor="description">Description</label>
-                    <input type="text" name='description' id='description' onChange={((e) => {
-
-                        setProducts({ ...products, description: e.target.value })
-
-                    })} />
-                </li>
-                <li>
-                    <label htmlFor="imageurl">İmage</label>
-                    <input type="text" name='imageurl' id='imageurl' onChange={((e) => {
-
-                        setProducts({ ...products, imageUrl: e.target.value })
-
-                    })} />
-                </li>
-                <button onClick={((e) => (
-
-                    e.preventDefault(),
-                    yukle()
-
-
-                ))} type='submit' >Tıkla</button>
-            </form>
-
-
-            <button onClick={urunler}>Urunleri getir</button>
-
-            <div>
-                {allproducts.map((item) => (
-                    // Burada h3 etiketini döndürmeniz gerekiyor
-                    <div>
-                        <h3 key={item.id}>{item.imageUrl}</h3>
-                        <img src={item.imageUrl} alt="resim" />
-
-                    </div>
-
-                ))}
-            </div> */
 }
