@@ -35,53 +35,37 @@ export default function MainLayout() {
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
-            <li className="nav-item">
-              <Link  to={"/"} className="nav-link">AnaSayfa</Link>
-            </li>
             <li className="nav-item active">
-              <Link to={"/create"} className="nav-link">
-                Home
+              <Link to={"/"} className="nav-link">
+                AnaSayfa
               </Link>
             </li>
-            <li className="nav-item">
-              <Link to={"/index"} className="nav-link">
-                Records
+            <li className="nav-item ">
+              <Link to={"/about"} className="nav-link">
+                Hakkımda
               </Link>
             </li>
-          </ul>
-        </div>
-      </nav>
-
-      <nav class="nav">
-        <div class="container">
-          <div class="logo">
-            <div className="row"></div>
-          </div>
-          <div id="mainListDiv" class="main_list">
-            <ul class="navlinks">
-              <li>
-                <Link to="/" >AnaSayfa</Link>
-              </li>
-              <li>
-                <Link  to="/about" >Hakkımda</Link>
-              </li>
-              <li>
-                <Link to="/blog">Blog</Link>
-              </li>
-              <li>
-                <Link to="/contact">İletişim</Link>
-              </li>
-
-              {key && (
+            <li className="nav-item ">
+              <Link to={"/blog"} className="nav-link">
+                Blog
+              </Link>
+            </li>
+            <li className="nav-item ">
+              <Link to={"/contact"} className="nav-link">
+                İletişim
+              </Link>
+            </li>
+            {key && (
                 <div>
-                  <li>
-                    <Link to="/admin">Blog Ekle</Link>
+                  <li className="nav-item ">
+                    <Link className="nav-link" to="/admin">Blog Ekle</Link>
                   </li>
-                  <li>
-                    <Link to="/bloglist">Blog Listesi</Link>
+                  <li className="nav-item ">
+                    <Link className="nav-link" to="/bloglist">Blog Listesi</Link>
                   </li>
-                  <li>
-                    <Link
+                  <li className="nav-item ">
+                    <Link 
+                    className="nav-link"
                       onClick={() => {
                         localStorage.clear();
                       }}
@@ -92,15 +76,10 @@ export default function MainLayout() {
                   </li>
                 </div>
               )}
-            </ul>
-          </div>
-          <span class="navTrigger">
-            <i></i>
-            <i></i>
-            <i></i>
-          </span>
+          </ul>
         </div>
       </nav>
+
 
       <section className="home">
         <div>
