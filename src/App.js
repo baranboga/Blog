@@ -13,6 +13,10 @@ import Blogupdate from './components/Blogupdate';
 import İletisim from './components/İletisim';
 import About from './components/About';
 import Text from './components/Text';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/js/bootstrap.bundle.min";
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 
 
