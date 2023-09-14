@@ -15,7 +15,7 @@ let options = {
     data: {},
   };
 
-const url="http://localhost:3000/api"
+const url="https://blogapi-1koz.onrender.com/api"
 
 
 
