@@ -21,7 +21,7 @@ export default function MainLayout() {
 
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav  className="navbar navbar-expand-lg nav">
         <button
           className="navbar-toggler"
           type="button"
@@ -35,22 +35,22 @@ export default function MainLayout() {
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
-            <li className="nav-item active">
-              <Link to={"/"} className="nav-link">
+            <li style={{marginRight:"40px"}} className="nav-item active ">
+              <Link to={"/"} className="nav-link lin">
                 AnaSayfa
               </Link>
             </li>
-            <li className="nav-item ">
+            <li style={{marginRight:"40px"}} className="nav-item ">
               <Link to={"/about"} className="nav-link">
                 Hakkımda
               </Link>
             </li>
-            <li className="nav-item ">
+            <li style={{marginRight:"40px"}} className="nav-item ">
               <Link to={"/blog"} className="nav-link">
                 Blog
               </Link>
             </li>
-            <li className="nav-item ">
+            <li style={{marginRight:"40px"}} className="nav-item ">
               <Link to={"/contact"} className="nav-link">
                 İletişim
               </Link>
